@@ -125,12 +125,14 @@ print("The area of the triangle is: " + str(area))
 hasilnya sama kyk gerbang logika
 - AND
   | Syarat 1 | Syarat 2 | Hasil |
+  | -------- | -------- | ----- |
   | True | True | True |
   | True | False | False |
   | False | True | False |
   | False | False | False |
 - OR
   | Syarat 1 | Syarat 2 | Hasil |
+  | -------- | -------- | ----- |
   | True | True | True |
   | True | False | True |
   | False | True | True |
