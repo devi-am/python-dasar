@@ -14,11 +14,11 @@
     print("Karakter ke-6:", karakter_ke_6)
     ```
 3.	Tampilkan 10 karakter pertama dari string tersebut.
-   ``` python
-   # 3. Tampilkan 10 karakter pertama (indeks 0 sampai 9)
-   sepuluh_karakter_pertama = kalimat[:10]
-   print("10 karakter pertama:", sepuluh_karakter_pertama)
-   ```
+    ``` python
+    # 3. Tampilkan 10 karakter pertama (indeks 0 sampai 9)
+    sepuluh_karakter_pertama = kalimat[:10]
+    print("10 karakter pertama:", sepuluh_karakter_pertama)
+    ```
 4.	Ubah string tersebut menjadi huruf kapital.
     ``` python
     # 4. Ubah string menjadi huruf kapital (uppercase)
