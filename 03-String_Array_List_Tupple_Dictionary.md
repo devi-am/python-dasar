@@ -204,33 +204,45 @@ print(x[0])
 
 ## Tuple
 Tuple pakai kurung (), bukan kurung persegi kyk list [] <br>
-ini akan meng-output-kan tuple
 ```python
-def convert_seconds(seconds):
-  hours = seconds // 3600
-  minutes = (seconds - hours * 3600) // 60
-  remaining_seconds = seconds - hours * 3600 - minutes * 60
-  return hours, minutes, remaining_seconds
-result = convert_seconds(5000)
-print(result)
-
-# Output
-# (1, 23, 20)
+thistuple = ("apple", "banana", "cherry")
+print(thistuple)
 ```
-output ini bukan tuple
+### Tuple berisi 1 item
+untuk membuat tuple berisi 1 item, tambahkan koma (,) di akhir
 ```python
-def convert_seconds(seconds):
-  hours = seconds // 3600
-  minutes = (seconds - hours * 3600) // 60
-  remaining_seconds = seconds - hours * 3600 - minutes * 60
-  return hours, minutes, remaining_seconds
-result = convert_seconds(5000)
-hours, minutes, seconds = result
-print(hours, minutes, seconds)
+thistuple = ("apple",)
+print(type(thistuple))
 
-# Output
-#  1 23 20
+#NOT a tuple
+thistuple = ("apple")
+print(type(thistuple))
 ```
+### Tuple bisa mengandung berbagai tipe data
+```python
+tuple1 = ("apple", "banana", "cherry")
+tuple2 = (1, 5, 7, 9, 3)
+tuple3 = (True, False, False)
+tuple4 = ("abc", 34, True, 40, "male")
+```
+
+### Akses Tuple
+- indexing
+  ```python
+  thistuple = ("apple", "banana", "cherry")
+  print(thistuple[1])
+  ```
+- range index
+  ```python
+  thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+  print(thistuple[2:5])
+  ```
+- akses dengan IF
+  ```pythom
+  thistuple = ("apple", "banana", "cherry")
+  if "apple" in thistuple:
+    print("Yes, 'apple' is in the fruits tuple")
+  ```
 
 # Perbedaan List dan Tuple: <br>
 | List | Tuple |
