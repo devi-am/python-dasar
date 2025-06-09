@@ -165,7 +165,7 @@ Untuk menggunakan modul, caranya adalah dengan memanggil nama modulnya (bisa ket
 import math as m
 import datetime as dt
 
-nilai_pi = m.pi()  # menggunakan fungsi pi() pada modul math untuk memakai nilai pi
+nilai_pi = m.pow(2, 3)  # 2 pangkat 3 (2^3)  # menggunakan fungsi pow() pada modul math untuk pemangkatan
 
 tanggal_hari_ini = dt.date.today()  # menggunakan fungsi date.today() pada modul datetime untuk mengambil tanggal hari ini
 ```
