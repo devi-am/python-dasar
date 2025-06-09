@@ -144,3 +144,28 @@ my_function()
   my_function("Tobias")
   my_function("Linus")
   ```
+## Modul
+Modul adalah file Python (.py) yang berisi kumpulan fungsi, variabel, atau class yang bisa digunakan ulang di program lain.<br>
+### import
+Untuk bisa memakai modul pertama harus melakukan ```import``` modul. Contoh di bawah ini adalah pemanggilan beberapa modul
+```python
+import math  # modul untuk matematika
+import random  # modul untuk membuat angka random
+```
+### import as
+Bisa juga memisalkan nama modul menjadi huruf atau kata singkat agar lebih ringkas saat memanggil modul.
+```python
+import math as m
+import datetime as dt
+```
+
+### Menggunakan modul
+Untuk menggunakan modul, caranya adalah dengan memanggil nama modulnya (bisa ketik permisalannya kalau dimisalkan dengan ```as```) kemudian mengetik fungsi dari modul tersebut yang mau dipakai
+```python
+import math as m
+import datetime as dt
+
+nilai_pi = m.pi()  # menggunakan fungsi pi() pada modul math untuk memakai nilai pi
+
+tanggal_hari_ini = dt.date.today()  # menggunakan fungsi date.today() pada modul datetime untuk mengambil tanggal hari ini
+```
