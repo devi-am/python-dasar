@@ -228,4 +228,28 @@ body_measurement_df.groupby(by='age').agg({
 })
 ```
 
+### Beberapa Parameter Statistik lainnya
+| Fungsi      | Kegunaan                                                        |
+| ----------- | --------------------------------------------------------------- |
+| `mean()`    | Menghitung rata-rata                                            |
+| `max()`     | Nilai maksimum                                                  |
+| `min()`     | Nilai minimum                                                   |
+| `sum()`     | Menjumlahkan nilai                                              |
+| `count()`   | Menghitung jumlah baris (bisa dipakai untuk frekuensi)          |
+| `median()`  | Mengambil nilai tengah                                          |
+| `std()`     | Standar deviasi                                                 |
+| `var()`     | Varians                                                         |
+| `first()`   | Nilai pertama dalam grup                                        |
+| `last()`    | Nilai terakhir dalam grup                                       |
+| `nunique()` | Jumlah nilai unik                                               |
+| `size()`    | Jumlah elemen per grup (mirip `count()` tapi untuk semua kolom) |
+| `mode()`    | Nilai yang paling sering muncul                                 |
+
 > [Dokumentasi Group by](https://pandas.pydata.org/pandas-docs/stable/reference/groupby.html#)
+
+## Short value
+Berfungsi untuk mengurutkan data pada pivot tabel.
+```python
+# Urutkan berdasarkan rata-rata berat dari terbesar
+body_measurement_df.groupby("age")["weight_kg"].mean().sort_values(ascending=False)
+```
