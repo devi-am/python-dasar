@@ -190,7 +190,7 @@ Tahap berikutnya adalah proses apply atau perhitungan parameter dari setiap kelo
 Tahap terakhir ialah menggabungkan (combine) seluruh key dengan nilai parameternya ke dalam satu tabel.
 ![image](https://github.com/user-attachments/assets/892fd8d7-cb89-405e-aff7-bb5f729cdbf1)
 
-##Group by
+## Group by
 Pengelompokan data bisa menggunakan **library Pandas** menggunakan ```groupby()``` dan bisa dipadukan dengan berbagai method untuk menghitung parameter statistik, seperti ```mean()```, ```mode()```, dll.
 ```python
 import pandas as pd
