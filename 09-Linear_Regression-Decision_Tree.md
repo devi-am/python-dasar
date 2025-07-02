@@ -77,3 +77,46 @@ print("Prediksi harga jika luas rumah 85 m2:", prediksi[0], "juta")
 Decision tree adalah metode yang digunakan untuk membuat keputusan berdasarkan serangkaian pertanyaan.
 Bentuknya seperti pohon bercabang, setiap cabang mewakili kondisi/pertanyaan, dan setiap daun mewakili hasil akhir.
 
+| Panas (1/0) | Hujan (1/0) | Beli Es Krim |
+| ----------- | ----------- | ------------ |
+| 1           | 0           | ya           |
+| 1           | 1           | tidak        |
+| 0           | 0           | ya           |
+| 0           | 1           | tidak        |
+
+```python
+from sklearn.tree import DecisionTreeClassifier
+
+# data
+X = [[1, 0], [1, 1], [0, 0], [0, 1]]
+y = ["ya", "tidak", "ya", "tidak"]
+
+# model
+tree = DecisionTreeClassifier()
+tree.fit(X, y)
+```
+
+### Prediksi
+```python
+print(tree.predict([[1, 0]]))  # panas, tidak hujan → ya
+print(tree.predict([[0, 1]]))  # tidak panas, hujan → tidak
+```
+
+### Visualisasi Struktur Tree
+```python
+from sklearn.tree import plot_tree
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(6, 4))
+plot_tree(tree,
+          feature_names=["panas", "hujan"],
+          class_names=tree.classes_,
+          filled=True)
+plt.show()
+
+```
+
+- Setiap cabang → “pertanyaan”
+- Komputer mencari pertanyaan yang membagi data paling rapi
+- Tujuannya: memisahkan kelas (label) sejelas mungkin
+- Model belajar dari data masa lalu → supaya bisa memutuskan untuk data baru
